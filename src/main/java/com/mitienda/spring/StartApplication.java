@@ -6,7 +6,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.mitienda.spring.menu.menuPrincipal;
+
 
 @SpringBootApplication
 public class StartApplication implements CommandLineRunner {
