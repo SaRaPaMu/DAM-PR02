@@ -1,11 +1,21 @@
 package com.mitienda.spring.menus;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-public class MenuFactura {
-	public void initMenuFactura() {
+import com.mitienda.spring.controllers.FacturaController;
+import com.mitienda.spring.models.Factura;
 
-		Scanner scan = new Scanner(System.in);
+
+
+public class MenuFactura {
+	
+	FacturaController clCtrl = FacturaController.getInstance();
+	List<Factura> facturasLista = new ArrayList<>();
+	Scanner scan = new Scanner(System.in);
+	
+	public void initMenuFactura() {
 		int numero;
 
 		System.out.println("\n");
@@ -13,7 +23,6 @@ public class MenuFactura {
 
 		System.out.println("(1).Crear\n");
 		System.out.println("(2).Actualizar\n");
-		System.out.println("(3).Consultar\n");
 		System.out.println("(4).Borrar\n");
 		System.out.println("(5).Listar\n");
 
@@ -29,8 +38,6 @@ public class MenuFactura {
 		case 3:
 			break;
 		case 4:
-			break;
-		case 5:
 			break;
 		}
 
