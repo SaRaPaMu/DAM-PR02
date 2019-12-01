@@ -6,6 +6,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.mitienda.spring.menus.Menu;
+
 
 
 @SpringBootApplication
@@ -25,8 +27,8 @@ public class StartApplication implements CommandLineRunner {
 		 * Aqui controlar los Menus y el cambio entre ellos. Y En cada menu; usar su
 		 * respectivo Controller y Repository
 		 */
-		
-
+		Menu menu = new Menu();
+		menu.initMenu();
 	}
 
 }
