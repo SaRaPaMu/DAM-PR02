@@ -4,12 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import com.mitienda.spring.controllers.CategoryController;
 import com.mitienda.spring.controllers.ProductoController;
+import com.mitienda.spring.models.Categoria;
 import com.mitienda.spring.models.Producto;
 
 public class MenuProducto {
 	ProductoController prodCtrl = ProductoController.getInstance();
 	List<Producto> productosLista = new ArrayList<>();
+	
+	CategoryController ctCtrl = CategoryController.getInstance();
+	List<Categoria> categoriasLista = new ArrayList<>();
+	
 	Scanner scan = new Scanner(System.in);
 	
 	public void initMenuProducto() {
@@ -100,10 +106,11 @@ public class MenuProducto {
 		
 		System.out.println("Cambiar categoria? si/no");
 		valores = scan.nextLine();		
-		if(valores=="si") {		
+		if(valores=="si") {
+				listIdCategoria();
 				System.out.println("Categoria:");
-				valor =(int) Integer.parseInt(scan.nextLine());	
-				prod.setId_categoria(valor);
+				valor =(int) Integer.parseInt(scan.nextLine());				
+				prod.setId_categoria(categoriasLista.get(valor).getId());
 
 		}
 				
@@ -147,13 +154,24 @@ public class MenuProducto {
 		prod.setStock(valor);
 		System.out.println("\n");	
 		
+		listIdCategoria();
 		System.out.println("Categoria:");
-		valor =(int) Integer.parseInt(scan.nextLine());	
-		prod.setId_categoria(valor);	
+		valor =(int) Integer.parseInt(scan.nextLine());				
+		prod.setId_categoria(categoriasLista.get(valor).getId());	
 		
 		System.out.println("\n");
 		
 		prodCtrl.save(prod);
 
+	}
+	
+	public void listIdCategoria() {
+		categoriasLista = ctCtrl.list();
+
+		for (int i = 0; i < categoriasLista.size(); i++) {
+
+			System.out.println(i + " : " + categoriasLista.get(i));
+
+		}
 	}
 }
