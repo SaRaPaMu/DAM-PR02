@@ -62,7 +62,7 @@ public class MenuFactura {
 
 	
 	public void actualizar() {
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
 		listar();
 		System.out.println("\nDime el id de la factura que quieres modificar:");		
 		String leeido;
@@ -78,7 +78,7 @@ public class MenuFactura {
 		if(valores=="si") {
 			boolean correcto=true;
 			do {
-			System.out.println("fecha(dd/MM/aaaa):");
+			System.out.println("fecha(aaaa/MM/dd):");
 			valores = scan.nextLine();
 			try {
 				fac.setFecha(sdf.parse(valores));
@@ -127,14 +127,14 @@ public class MenuFactura {
 	public void crear() {
 
 		Factura fac = new Factura();
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
 		 
 		System.out.println("Dame los datos de la nueva factura\n");
 		String valores;
 		int valor;
 			boolean correcto=true;
 			do {
-			System.out.println("fecha(dd/MM/aaaa):");
+			System.out.println("fecha(aaaa/MM/dd):");
 			valores = scan.nextLine();
 			try {
 				fac.setFecha(sdf.parse(valores));
