@@ -18,7 +18,7 @@ public class MenuFacturaLinea {
 
 	Scanner scan = new Scanner(System.in);
 
-	public void initMenuFactura() {
+	public void initMenuFacturaLinea() {
 		int numero;
 
 		System.out.println("\n");

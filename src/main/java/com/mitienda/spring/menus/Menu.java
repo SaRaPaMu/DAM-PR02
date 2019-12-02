@@ -24,7 +24,8 @@ public class Menu {
 			System.out.println("(2).Categorias\n");
 			System.out.println("(3).Productos\n");
 			System.out.println("(4).Facturas\n");
-			System.out.println("(5).Salir\n");
+			System.out.println("(5).FacturaLinea\n");
+			System.out.println("(6).Salir\n");
 
 			System.out.println("\n");
 
@@ -50,6 +51,10 @@ public class Menu {
 				fac.initMenuFactura();
 				break;
 			case 5:
+				MenuFacturaLinea facL = new MenuFacturaLinea();
+				facL.initMenuFacturaLinea();
+				break;
+			case 6:
 				salir = 1;
 				System.out.println("Finalizado");
 				break;
