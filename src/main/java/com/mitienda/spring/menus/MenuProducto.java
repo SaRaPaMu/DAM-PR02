@@ -29,6 +29,7 @@ public class MenuProducto {
 		System.out.println("(2).Actualizar\n");
 		System.out.println("(3).Borrar\n");
 		System.out.println("(4).Listar\n");
+		System.out.println("(5).Volver\n");
 
 		System.out.println("Escoge una opcion: ");
 
@@ -46,6 +47,8 @@ public class MenuProducto {
 			break;
 		case 4:
 			listar();
+			break;
+		case 5:
 			break;
 		}
 

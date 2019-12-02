@@ -26,8 +26,9 @@ public class MenuFacturaLinea {
 
 		System.out.println("(1).Crear\n");
 		System.out.println("(2).Actualizar\n");
-		System.out.println("(4).Borrar\n");
-		System.out.println("(5).Listar\n");
+		System.out.println("(3).Borrar\n");
+		System.out.println("(4).Listar\n");
+		System.out.println("(5).Volver\n");
 
 		System.out.println("Escoge una opcion: ");
 
@@ -46,6 +47,8 @@ public class MenuFacturaLinea {
 		case 4:
 			listar();
 			break;
+		case 5:
+			break;	
 		}
 
 	}
